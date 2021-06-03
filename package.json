@@ -1,0 +1,37 @@
+{
+  "name": "festival-musica",
+  "version": "1.0.0",
+  "description": "learnig gulp and sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "edgar ochoa",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.5",
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^6.0.0",
+    "postcss": "^8.3.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "gulp-cli": "^2.3.0",
+    "yargs-parser": "^20.2.7"
+  }
+}
