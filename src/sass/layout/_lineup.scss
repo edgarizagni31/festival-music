@@ -1,0 +1,72 @@
+.lineup {
+    background-color: $pink;
+    color: $white;
+    padding: 1rem;
+
+    &__title,
+    &__day {
+        text-align: center;
+    }
+
+    &__title {
+        margin: 0;
+        padding-top: 1rem;
+
+    }
+
+    &__group {
+        @include tablet {
+            @include grid(2,$separation);
+        }
+    }
+
+    &__list li {
+        padding: 1rem;
+    }
+
+    @include tablet {
+        padding: 3rem;
+    }
+}
+
+
+.bg-yellow {
+    background-color: $yellow;
+    color: $black;
+}
+
+.bg-yellow .lineup__list li:nth-child(2n-1) {
+    background-color: darken($yellow, 10);
+}
+
+.bg-green {
+    background-color: $green;
+    color: $black;
+}
+
+.bg-green .lineup__list li:nth-child(2n-1) {
+    background-color: darken($green, 10);
+}
+
+.esc::after {
+    background-size: 15rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    width: 20rem;
+    height: 10rem;
+    display: block;
+    margin: 2rem auto 0 auto;
+}
+
+.edm .esc {
+    &::after{
+        background-image: url(../media/images/icono_edm.webp);
+    }
+}
+
+.rock .esc {
+    &::after{
+        background-image: url(../media/images/icono_rock.webp);
+    }
+}

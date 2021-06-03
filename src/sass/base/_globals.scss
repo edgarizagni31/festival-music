@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+
+    &.fixed-body {
+        overflow: hidden;
+    }
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+    color: $black;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    font-size: 1.4rem;
+}
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}

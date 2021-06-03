@@ -1,0 +1,55 @@
+.video {
+    max-height: 40rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &__overlay {
+        align-items: center; 
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+67,ffffff+100&0.8+0,0.5+100 */
+        background: -moz-linear-gradient(-45deg,  rgba(137,28,30,0.8) 0%, rgba(158,55,242,0.6) 67%, rgba(255,255,255,0.5) 100%); 
+        background: linear-gradient(135deg,  rgba(137,28,30,0.8) 0%,rgba(158,55,242,0.6) 67%,rgba(255,255,255,0.5) 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc891c1e', endColorstr='#80ffffff',GradientType=1 ); 
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        
+        div {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        
+    }
+
+    &__title {
+        color: $white;
+        font-weight: $fw-bold;
+        margin: 0;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        @include phone {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__span {
+        background-color: $pink;
+        color: $white;
+        font-weight: $fw-bold;
+        width: 20rem;
+        padding: 10px;
+    }
+
+    &__video {
+        display: block;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,55 @@
+.gallery-content {
+    padding: $separation/2 0;
+
+    h3 {
+     text-align: center;
+    }
+}
+
+.gallery {
+  @include grid(2, $separation/2);
+  place-items: center;
+
+  @include tablet {
+    @include grid(4, $separation);
+  }
+
+  @include laptop {
+    @include grid(6, $separation);
+  }
+}
+
+.overlay {
+  background-color: rgba($color: #000000, $alpha: .5);
+  display: grid;
+  height: 100%;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  & img {
+    width: 90%;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include laptop {
+      width: 60%;
+    }
+  }
+}
+
+.btn-close {
+  border: none;
+  border-radius: 50%;
+  font-weight: $fw-extrabold;
+  height: 3rem;
+  outline: none;
+  width: 3rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

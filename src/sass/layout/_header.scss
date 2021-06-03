@@ -1,0 +1,46 @@
+.header {
+    background-color: $green;
+    color: $black;
+    padding: $separation/3 0;
+    transition: all .3s;
+
+    &__content {
+        @include phone {
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin: 0;
+        padding-bottom: $separation/4;
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+.header__title {
+    a {
+        color: $black;
+    }
+}
+
+.header__nav {
+    display: flex;
+    a {
+        color: $black;
+        margin-right: $separation/5;
+    }
+
+    a:hover {
+        color: $yellow;
+    }
+}

@@ -1,0 +1,27 @@
+.about {
+    @include tablet {
+        @include grid(2,$separation);
+    }
+
+    margin-bottom: 2rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    &__sub {
+        color: $pink;
+        font-weight: $fw-bold;
+    }
+
+    &__text {
+        line-height: 2;
+    }
+}

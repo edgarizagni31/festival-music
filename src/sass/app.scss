@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globals';
+
+//  layouts
+@import 'layout/header';
+@import 'layout/video';
+@import 'layout/about';
+@import 'layout/lineup';
+@import 'layout/gallery';
