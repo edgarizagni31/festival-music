@@ -29,7 +29,6 @@ sass.compiler = require('dart-sass');
 function minimizerHtml() {
     return src('./public/index.html')
         .pipe( htmlmin({ collapseWhitespace: true }) )
-        .pipe( notify({ message: 'minmizer HTML' }))
         .pipe( dest('./build/') )
 }
 
@@ -45,7 +44,6 @@ function minimizerCSS() {
         .pipe( sass() )
         .pipe( postcss([ autoprefixer(), cssnano() ] ))
         .pipe( sourcemaps.write('.') )
-        .pipe( notify({ message: 'minimizer css' }))
         .pipe( dest('./build/static/css') );
 }
 
@@ -57,13 +55,11 @@ function minimizerImgs() {
     return src('./src/assets/images/**/*')
         .pipe( imagemin() )
         .pipe(  webp() )
-        .pipe( notify({ message: 'minified image' }))
         .pipe( dest('./build/static/media/images') ) ;
 }
 
 function copyVideo () {
     return src( './src/assets/video/**/*' )
-        .pipe( notify({ message: 'copy video' }) )
         .pipe( dest( './build/static/media/video' ) )
 }
 
@@ -75,7 +71,6 @@ function js() {
         .pipe( terser() )
         .pipe( rename( { suffix: '.min'} ))
         .pipe( sourcemaps.write('.') )
-        .pipe( notify({ message: 'minimizer js' }) )
         .pipe( dest('./build/static/js') )
 }
 
