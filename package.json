@@ -4,7 +4,7 @@
   "description": "learnig gulp and sass",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx gulp build"
   },
   "author": "edgar ochoa",
   "license": "ISC",
