@@ -40,10 +40,8 @@ function compilerSass() {
 
 function minimizerCSS() {
     return src('./src/sass/app.scss')
-        .pipe( sourcemaps.init() )
         .pipe( sass() )
         .pipe( postcss([ autoprefixer(), cssnano() ] ))
-        .pipe( sourcemaps.write('.') )
         .pipe( dest('./build/static/css') );
 }
 
@@ -54,7 +52,7 @@ function watchSass() {
 function minimizerImgs() {
     return src('./src/assets/images/**/*')
         .pipe( imagemin() )
-        .pipe(  webp() )
+        .pipe( webp() )
         .pipe( dest('./build/static/media/images') ) ;
 }
 
@@ -65,12 +63,10 @@ function copyVideo () {
 
 function js() {
     return src('./src/js/**/*')
-        .pipe( sourcemaps.init() )
         .pipe( concat('bundle.js') )
         .pipe( babel() )
         .pipe( terser() )
         .pipe( rename( { suffix: '.min'} ))
-        .pipe( sourcemaps.write('.') )
         .pipe( dest('./build/static/js') )
 }
 
