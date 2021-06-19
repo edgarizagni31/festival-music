@@ -1,4 +1,4 @@
-# [Rock and Media Festival](https://festival-music75.netlify.app/)
+# [Rock and EDM Festival](https://festival-music75.netlify.app/)
 
 ## Descripción
 Landing page sobre Rock and EDM Festival 
